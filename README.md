@@ -6,10 +6,14 @@ That XMPP user can then send messages to the IRC server through the bot by respo
 This project came up as a way to be notified when I was mentioned in an IRC channel that I usually idle in with irssi running in a tmux session.  
 This allows me to be notified on my phone when I recieve a mention, and potentially respond when I
 
-##Prerequisites
+##Prerequisites & Instructions
 
 you will need 2 accounts on an XMPP server: one for the bot, and one for you to listen for the bot's communication.  
 Beyond that, the code is written in Java 1.6, and uses Maven to build, with all required dependencies supplied. 
+
+To build a runnable jar with all included dependencies, execute this command: `mvn clean compile assembly:single`.  the resulting jar will be in the target directory
+
+To run, fill in the config file, rename it to config.xml, place it in the same folder as the jar, and execute `java -jar <name of jar>.jar`
 
 ##Technical Details
 
@@ -20,7 +24,9 @@ I use a commons-configuration to handle the XML configuration file.  slf4j is an
 ##The Future
 For now, the library listens for a particular user, and sends and recieves messages to a single XMPP endpoint.  
 The idea in the near future is to provide a subscription model where users can subscribe and unsubscribe their nicks with in-channel commands, persisting the data in some sort of datastore.
-I am also considering adding some mechanism to send/recieve messages via private message with the bot. 
+I am also considering adding some mechanism to send/recieve messages via private message with the bot.
+
+Also, I need to add logging and better exception handling.
 
 ## License
 

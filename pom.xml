@@ -52,17 +52,18 @@
     <build>
 	<plugins>
 	    <plugin>
-		<groupId>org.apache.maven.plugins</groupId>
-		<artifactId>maven-jar-plugin</artifactId>
-		<version>2.3.2</version>
+		<artifactId>maven-assembly-plugin</artifactId>
 		<configuration>
-		    <archive>
-			<manifest>
-			    <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
-			</manifest>
-		    </archive>
+        <archive>
+          <manifest>
+            <mainClass>com.officialsounding.notifybot.BotRunner</mainClass>
+          </manifest>
+        </archive>
+        <descriptorRefs>
+          <descriptorRef>jar-with-dependencies</descriptorRef>
+        </descriptorRefs>
 		</configuration>
-	    </plugin>
+		</plugin>
 	    <plugin>
 		<groupId>org.apache.maven.plugins</groupId>
 		<artifactId>maven-compiler-plugin</artifactId>
