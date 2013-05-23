@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<config>
+  <irc>
+	<notifyOn>username</notifyOn>
+	<botNick>notifybot</botNick>
+	<server>irc.example.com</server>
+	<port>6667</port>
+	<channel>#main</channel>
+  </irc>
+  <xmpp>
+	<username>notifybot</username>
+	<password>changemen</password>
+	<server>jabber.org</server>
+	<serviceName>jabber.org</serviceName>
+	<notifiedUser>username@jabber.org</notifiedUser>
+  </xmpp>
+</config>
